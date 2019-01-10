@@ -1,0 +1,33 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Encuesta final - Página 2
+{% endblock %}
+
+{% block content %}
+
+<h4>     Por favor indique si en los últimos 12 meses, usted ha sido víctima de:
+</h4>
+
+<p>
+
+</p>
+
+<table class="table" valign="middle" >
+    {% for field in form %}
+        <tr>
+            <th>{{ field.label }}</th>
+            {% for choice in field %}
+                <td>{{ choice }}</td>
+            {% endfor %}
+        </tr>
+
+    {% endfor %}
+
+</table>
+
+    {% next_button %}
+{% endblock %}
+
+

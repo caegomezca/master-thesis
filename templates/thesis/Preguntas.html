@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+Encuesta inicial
+{% endblock %}
+
+{% block content %}
+    <p align="justify">
+    Antes de empezar nos gustaría que contestara las siguientes preguntas:
+        </p>
+
+    {% for field in form %}
+        {% formfield field %}
+    {% endfor %}
+
+<p>
+    Para seguir por favor oprima el botón "Continuar".
+</p>
+
+
+
+   {% next_button %}
+{% endblock %}

@@ -1,0 +1,86 @@
+{% load otree staticfiles %}
+
+<div class="card bg-light instructions">
+    <div class="card-body">
+
+<h3> Instrucciones</h3>
+
+           <b> Primera actividad.</b> Usted interactuará con otra persona.
+        No sabrá quién es la contraparte, es alguien entre todos los participantes que están en este momento en el salón.
+        Quién será, el computador lo determinará más adelante a través de un sorteo.
+        </p>
+
+ <p align="justify">
+
+     El computador sorteó que su dotación inicial es de {{ player.endowment }} para esta primera decisión.
+
+
+ </p>
+<p align="justify">
+    Usted y la otra persona tienen que elegir entre dos colores: <b><font color=#32CD32>verde</font></b> y
+    <b><font color=#00008B>azul</font></b>. Lo que recibirá depende del color que usted elija y el color elegido
+    por la persona emparejada con usted.
+
+  </p>
+
+
+
+<p align="justify">
+
+Solo pueden pasar cuatro cosas:
+
+<ol>
+
+<li value="1">Si ambos elijen el color <b><font color=#32CD32>verde</font></b>, ambos pierden 6 puntos. </li>
+
+<li>Si ambos elijen el color  <b><font color=#00008B>azul</font></b>, ambos pierden 2 puntos. </li>
+
+<li> Si usted elije el color <b><font color=#32CD32>verde</font></b> y el otro participante el color <b><font color=#00008B>azul</font></b>,
+    usted no pierde nada y el otro participante pierde 10 puntos. </li>
+
+    <li>Si usted elije el color <b><font color=#00008B>azul</font></b> y el otro participante el color <b><font color=#32CD32>verde</font></b>,
+        usted pierde 10 puntos y el otro participante no pierde nada.</li>
+
+</ol>
+
+  </p>
+
+<p>Estos cuatro posibles resultados se pueden representar en la siguiente tabla, donde los primeros pagos
+de cada celda corresponden a sus pagos y los pagos después de punto y coma corresponden a los pagos del
+otro participante.</p>
+
+<p>
+
+ <table class='table table-bordered text-center'
+           style='width: auto; margin: auto'>
+        <tr>
+            <th colspan=2 rowspan=2></th>
+            <th colspan=2>El otro participante</th>
+        </tr>
+        <tr>
+            <th> <b><font color=#32CD32>Verde</font></b></th>
+            <th><b><font color=#00008B>Azul</font></b></th>
+        </tr>
+        <tr>
+            <th rowspan=2><span class="rotate90"  valign="middle">Usted</span></th>
+            <th> <b><font color=#32CD32>Verde</font></b></th>
+            <td>{{ Constants.both_green_payoff }}; {{ Constants.both_green_payoff }} </td>
+            <td>{{ Constants.green_payoff }}; {{ Constants.blue_payoff }} </td>
+        </tr>
+        <tr>
+             <th><b><font color=#00008B>Azul</font></b></th>
+            <td>{{ Constants.blue_payoff }}; {{ Constants.green_payoff }}</td>
+            <td>{{ Constants.both_blue_payoff }}; {{ Constants.both_blue_payoff }}</td>
+
+        </tr>
+    </table>
+
+</p>
+
+<p>Si tiene alguna duda por favor levante la mano y lo atenderemos.</p>
+
+
+
+
+</div>
+</div>

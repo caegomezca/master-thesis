@@ -1,0 +1,61 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+    Consentimiento informado
+{% endblock %}
+
+{% block content %}
+    <p align="justify">
+      Usted ha sido invitado a participar en una investigación para entender cómo la gente toma decisiones económicas.
+        El estudio será llevado a cabo por el profesor Francesco Bogliacino de la
+        Facultad de Ciencias Económicas de la Universidad Nacional, con la ayuda de algunos colaboradores. Usted
+        tiene que ser mayor de 18 años para participar.
+         </p>
+  <p align="justify">
+      Si usted acepta ser incluido, participará en una serie de decisiones y deberá contestar algunas preguntas.
+      La participación en esta investigación requerirá como máximo una hora de su tiempo. Esta investigación cuenta con
+       aprobación para ser ejecutada por parte del Consejo de la Facultad de Ciencias Económicas.
+      </p>
+    <p align="justify">
+       Ser partícipe de esta investigación no implica ningún riesgo para usted.
+        Por participar en esta investigación usted tendrá la posibilidad de ganar una cantidad de dinero; no obstante,
+        sus ganancias pueden variar en función de sus decisiones, el mínimo pago puede ser 2 mil pesos
+        mientras que el máximo 26 mil pesos. El pago será en
+        efectivo una vez se termine la sesión.
+
+ </p>
+
+        <p align="justify">
+La participación es netamente voluntaria y usted puede dejar de participar en cualquier momento, pero si se va no
+            recibirá ningún dinero. Si prefiere no contestar alguna pregunta en particular lo puede hacer.
+ <p align="justify">
+    La metodología de este estudio garantiza completo anonimato, la información aquí suministrada es absolutamente
+    confidencial y sólo se usará con fines estadísticos. Una vez finalizada la investigación se eliminarán de la base
+    de datos los datos personales como el nombre y número de documento. Toda la información suministrada será tratada
+    conforme a la Ley de Habeas Data (Ley 1266 de 2008).
+
+ </p>
+<p align="justify">
+         Si hay algo sobre este estudio que necesite aclarar, si quiere reportar algún inconveniente o si tiene
+    dudas sobre sus derechos como participante en esta investigación o sobre cualquier otro asunto, no dude en
+    contactar al profesor Bogliacino al número 3165000 ext 10389, o al correo electrónico fbogliacino@unal.edu.co.
+
+    </p>
+
+
+<p align="justify">   Escribiendo su nombre y su número de documento a continuación, usted declara que ha sido debidamente informado y
+    que participa a esta investigación de manera voluntaria. </p>
+
+    {% for field in form %}
+        {% formfield field %}
+    {% endfor %}
+
+<p>
+    Para seguir por favor oprima el botón "Acepto".
+</p>
+
+
+
+    <button class="otree-btn-next btn btn-primary next-button otree-next-button">Acepto</button>
+
+{% endblock %}

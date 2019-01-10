@@ -1,0 +1,22 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+   Preguntas de control
+{% endblock %}
+
+{% block content %}
+Por favor responda estas preguntas para saber si las instrucciones son claras.
+
+
+    {% formfield player.q1 %}
+
+    {% formfield player.q2 %}
+
+   {% formfield player.q3 %}
+
+    {% formfield player.q4 %}
+
+    {% next_button %}
+
+{% endblock %}

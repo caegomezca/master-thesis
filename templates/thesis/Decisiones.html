@@ -1,0 +1,45 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+    Primera decisión
+{% endblock %}
+
+{% block content %}
+
+<p>
+<div class="container" >
+  <button type="button" class="btn btn-info btn-primary btn-block" data-toggle="collapse" data-target="#demo">Pulse aquí para ver las instrucciones de la primera actividad</button>
+  <div id="demo" class="collapse">
+   {% include Constants.instructions_template %}
+  </div>
+</div>
+</p>
+
+ <p align="justify">
+Usted tiene que indicar cuál color elige para cada una de las 19 posibles localidades de origen del otro participante.
+Para cada localidad de la siguiente tabla por favor indique el color que usted elige. Tenga en cuenta que su dotación
+inicial es {{ player.endowment }}.
+<p>
+<p align="justify">
+Cuando todos hayan tomado la decisión, el computador sorteará las parejas, se observará las localidades donde habitan cada uno
+y se aplicarán las elecciones para esas localidades. Por ejemplo, si el otro participante vive en Kennedy,
+le aplicaremos su elección correspondiente al primer renglón, etc. Y de la misma manera, lo haremos con el otro participante.
+</p>
+
+
+<table class="table">
+    {% for field in form %}
+        <tr>
+            <th>{{ field.label }}</th>
+            {% for choice in field %}
+                <td>{{ choice }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+
+
+ {% next_button %}
+{% endblock %}
+

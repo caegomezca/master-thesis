@@ -1,0 +1,31 @@
+<div class="table-responsive">
+    <table class="table table-sm" style="max-width:970px; font-size: 12px">
+        <tr>
+            <th>Treatment</th>
+            <th>Nombre</th>
+            <th>Id</th>
+            <th>Dilemma payoff</th>
+            <th>Elicitation payoff</th>
+            <th>Dictador payoff</th>
+             <th>Fee</th>
+            <th>Random payoff</th>
+            <th>Total payoff</th>
+                 <th>Player</th>
+        </tr>
+        {% for row in table_rows %}
+        <tr>
+            <td>{{ row.treatment }}</td>
+            <td>{{ row.nombre }}</td>
+            <td>{{ row.doc }}</td>
+            <td>{{ row.dilemma_payoff }}</td>
+            <td>{{ row.elicitation_payoff }}</td>
+            <td>{{ row.dictador_payoff }}</td>
+             <td>{{ row.fee }}</td>
+            <td>{{ row.random_payoff }}</td>
+            <td>{{ row.total_payoff }}</td>
+            <td>{{ row.player }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+</div>

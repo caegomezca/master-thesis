@@ -1,0 +1,24 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+    Pregunta
+{% endblock %}
+
+{% block content %}
+
+<p>
+Antes de empezar con las decisiones, nos gustaría que contestara con mucha atención la siguiente pregunta.
+    Tiene 5 minutos para contestar.
+</p>
+
+<p>
+    {{ player.primed }}
+</p>
+<p>
+        {% formfields %}
+</p>
+<p>Si ya terminó, por favor de click en el botón "Siguiente".</p>
+
+ {% next_button %}
+{% endblock %}
+

@@ -1,0 +1,30 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Pago final
+{% endblock %}
+
+{% block content %}
+
+ <table class="table">
+        <tr>
+             <th>Ganancia fija</th>
+            <th>Resultado actividad 1</th>
+            <th>Actividad sorteada por el computador</th>
+            <th>Pago en actividad sorteada</th>
+            <th>Pago final en pesos</th>
+        </tr>
+            <tr>
+                <td>{{ Constants.fee }}</td>
+                <td>{{ player.dilemma_payoff }}</td>
+                <td>{{ player.activity_random_payoff }}</td>
+                <td>{{ player.random_payoff }}</td>
+                <td>{{ player.money_payoff }}</td>
+            </tr>
+    </table>
+
+    {% next_button %}
+{% endblock %}
+
+

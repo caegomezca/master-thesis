@@ -1,0 +1,57 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Encuesta final - Página 1
+{% endblock %}
+
+{% block content %}
+
+<h4>  Por favor responda la siguiente encuesta. Recuerde que las respuestas son absolutamente anónimas y confidenciales.
+</h4>
+
+
+{% formfield player.estrato_fut %}
+{% formfield player.political %}
+{% formfield player.s24 %}
+{% formfield player.s25 %}
+{% formfield player.un %}
+
+<p> ¿Cuál cree que es su probabilidad de ser víctima de asalto violento en los próximos 12 meses?
+    Por favor conteste usando la siguiente escala de uno a cinco, donde uno indica “No muy probable” y 5 indica “Muy probable”.' </p>
+    <div class="table-responsive text-center align-middle">
+        <table class="table table-bordered" style="max-width:970px; font-size: 12px">
+            <tr>
+                <td >No muy probable</td>
+                <td><div class="radio "><label><input type="radio" name="s22" value="1"> 1</label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s22" value="2"> 2</label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s22" value="3"> 3</label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s22" value="4"> 4</label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s22" value="5"> 5</label></div></td>
+                <td >Muy probable</td>
+            </tr>
+            <tr>
+        </table>
+    </div>
+
+<p> 'Está de acuerdo con la afirmación “el barrio donde vivo es violento”. Por favor conteste usando la
+    siguiente escala de uno a cinco, donde uno indica “estoy totalmente en desacuerdo” y 5 indica “estoy totalmente de acuerdo”.</p>
+    <div class="table-responsive text-center align-middle">
+        <table class="table table-bordered" style="max-width:970px; font-size: 12px">
+            <tr>
+                <td >Estoy totalmente en desacuerdo</td>
+                <td><div class="radio "><label><input type="radio" name="s23" value="1"> 1</label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s23" value="2"> 2</label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s23" value="3"> 3</label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s23" value="4"> 4</label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s23" value="5"> 5</label></div></td>
+                <td >Estoy totalmente de acuerdo</td>
+            </tr>
+            <tr>
+        </table>
+    </div>
+
+    {% next_button %}
+{% endblock %}
+
+

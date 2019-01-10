@@ -1,0 +1,40 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Resultados primera decisión
+{% endblock %}
+
+{% block content %}
+
+  <table class="table">
+      <tr>
+        <td>Su dotación inicial</td>
+        <td>{{ player.endowment }}</td>
+    </tr>
+      <tr>
+        <td>Su localidad</td>
+        <td>{{ player.get_neighborhood_display }}</td>
+    </tr>
+     <tr>
+        <td>La localidad de la persona con la que fue emparejado</td>
+        <td>{{ player.get_other.get_neighborhood_display }}</td>
+    </tr>
+      <tr>
+        <td>Su decisión</td>
+        <td>{{ player.get_ego_choice_on_other_display }}</td>
+    </tr>
+    <tr>
+        <td>La decisión de la otra persona</td>
+        <td>{{ player.get_other_choice_on_ego_display }}</td>
+    </tr>
+       <tr>
+        <td>Su pago por la primera actividad</td>
+        <td>{{ player.dilemma_payoff }}</td>
+    </tr>
+</table>
+
+    {% next_button %}
+
+
+{% endblock %}

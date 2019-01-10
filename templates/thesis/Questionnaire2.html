@@ -1,0 +1,94 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Encuesta final - Página 3
+{% endblock %}
+
+{% block content %}
+
+<h4>    Por favor indique qué tan de acuerdo o en desacuerdo está con las siguientes afirmaciones:
+</h4>
+
+<p>
+
+</p>
+
+<table class="table">
+    <tr>
+
+<th> Afirmación</th>
+
+<th>Totalmente en desacuerdo</th>
+
+<th>Parcialmente en desacuerdo</th>
+
+<th>Parcialmente de acuerdo</th>
+  <th>Totalmente de acuerdo</th>
+
+</tr>
+
+    <tr>
+    <td>Me siento seguro cuando salgo en la noche</td>
+   <td><div class="radio "><label><input type="radio" name="s14" value="1"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s14" value="2"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s14" value="3"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s14" value="4"> </label></div></td>
+  </tr>
+ <tr>
+    <td>Siento que podría enfrentar amenazas contra mi vida</td>
+   <td><div class="radio "><label><input type="radio" name="s15" value="1"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s15" value="2"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s15" value="3"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s15" value="4"> </label></div></td>
+  </tr>
+     <tr>
+    <td>Siento miedo por mi vida</td>
+   <td><div class="radio "><label><input type="radio" name="s16" value="1"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s16" value="2"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s16" value="3"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s16" value="4"> </label></div></td>
+  </tr>
+     <tr>
+    <td>Siento que afronto riesgos cuando participo en reuniones sociales, económicas y políticas</td>
+   <td><div class="radio "><label><input type="radio" name="s17" value="1"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s17" value="2"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s17" value="3"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s17" value="4"> </label></div></td>
+  </tr>
+     <tr>
+    <td>Siento miedo de ser robado de día</td>
+   <td><div class="radio "><label><input type="radio" name="s18" value="1"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s18" value="2"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s18" value="3"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s18" value="4"> </label></div></td>
+  </tr>
+     <tr>
+    <td>Siento miedo de ser robado de noche</td>
+   <td><div class="radio "><label><input type="radio" name="s19" value="1"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s19" value="2"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s19" value="3"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s19" value="4"> </label></div></td>
+  </tr>
+     <tr>
+    <td>Siento miedo de ser agredido personalmente de día</td>
+   <td><div class="radio "><label><input type="radio" name="s20" value="1"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s20" value="2"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s20" value="3"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s20" value="4"> </label></div></td>
+  </tr>
+     <tr>
+    <td>Siento miedo de ser agredido personalmente de noche</td>
+   <td><div class="radio "><label><input type="radio" name="s21" value="1"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s21" value="2"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s21" value="3"> </label></div></td>
+                <td><div class="radio "><label><input type="radio" name="s21" value="4"> </label></div></td>
+  </tr>
+
+
+</table>
+
+    {% next_button %}
+{% endblock %}
+
+

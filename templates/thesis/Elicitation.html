@@ -1,0 +1,31 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Segunda decisión
+{% endblock %}
+
+{% block content %}
+
+<p>En la segunda decisión cada uno de ustedes tendrán que elegir cuál cree que fue la decisión que tomó el otro participante.
+Por favor elija el color que cree que eligió el otro participante.
+    Si adivina correctamente la decisión de la persona con la que usted va a ser emparejado usted ganará {{ Constants.elicitation_fee }}. </p>
+<p>
+          {% for field in form %}
+        {% formfield field %}
+    {% endfor %}
+
+    </p>
+
+
+
+<p>Recuerde que al final el computador sorteará si le pagamos esta segunda decisión o la tercera.</p>
+<p>Si tienen alguna duda por favor levanten la mano y el asistente lo atenderá.</p>
+<p>Una vez tome la segunda decisión por favor de click en siguiente. </p>
+
+
+    {% next_button %}
+
+
+
+{% endblock %}

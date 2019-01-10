@@ -1,0 +1,121 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+    Instrucciones
+{% endblock %}
+
+{% block content %}
+    Por favor no avance a la siguiente página hasta que se lo indique.
+<div class="card bg-light instructions">
+    <div class="card-body">
+    <p align="justify">
+
+        Usted realizará tres actividades el día de hoy. Las ganancias del día de hoy serán el resultado
+        de las decisiones que usted tome en estas tres actividades. Al final usted va a recibir las
+        ganancias de solo dos de estas tres actividades.
+        </p>
+         <p align="justify">La primera actividad se pagará con toda seguridad.
+        La actividad que se paga entre la segunda y la tercera se seleccionará por sorteo, una vez todos
+        terminen de contestar todas las actividades. Será el mismo computador quien hará el sorteo.
+        Es importante que piense cuidadosamente sus decisiones en cada una de las actividades y que
+        tome sus decisiones como si todas fueran pagadas, porque usted solo sabrá cuál de ellas se le
+        pagará hasta cuando termine de contestar todo.
+
+        </p>
+        <p>
+        Por el hecho de haber asistido el día de hoy a la actividad usted ya ganó 2.000 pesos colombianos.
+            Es decir, al finalizar la sesión usted recibirá 2.000 pesos más lo que gane en la primera
+            decisión más el pago obtenido en la decisión sorteada por el computador entre la segunda
+            decisión y la tercera decisión.
+
+ </p>
+  <p align="justify">Todas sus decisiones se pagarán en puntos. Al final de las actividades, los puntos que
+      usted haya ganado se convertirán a pesos colombianos. Cada punto equivale a 1000 pesos colombianos.
+      Por ejemplo, si usted tiene 5 puntos quiere decir que en realidad tiene 5.000 pesos colombianos.
+</p>
+
+
+</div>
+</div>
+         <p align="justify">
+             <b> Esta es la primera actividad.</b> Usted interactuará con otra persona.
+        Ninguna persona sabrá la identidad de la otra persona. Sin embargo,
+             es alguien entre todos los participantes que están en este momento en el salón.
+        Quién será, el computador lo determinará más adelante a través de un sorteo.
+        </p>
+
+ <p align="justify">
+
+     Usted va a recibir una dotación inicial de {{ Constants.endowmentpd }} para esta primera decisión.
+     Sin embargo, esta cantidad puede variar. Más adelante, esto se determinará por medio
+     de un sorteo que realizará el computador.
+
+ </p>
+<p align="justify">
+    Usted y la otra persona tienen que elegir entre dos colores: <b><font color=#32CD32>verde</font></b> y
+    <b><font color=#00008B>azul</font></b>. Lo que recibirá depende del color que usted elija y el color elegido
+    por la persona emparejada con usted.
+
+  </p>
+
+
+
+<p align="justify">
+
+Solo pueden pasar cuatro cosas:
+
+<ol>
+
+<li value="1">Si ambos elijen el color <b><font color=#32CD32>verde</font></b>, ambos pierden 6 puntos. </li>
+
+<li>Si ambos elijen el color  <b><font color=#00008B>azul</font></b>, ambos pierden 2 puntos. </li>
+
+<li> Si usted elije el color <b><font color=#32CD32>verde</font></b> y el otro participante el color <b><font color=#00008B>azul</font></b>,
+    usted no pierde nada y el otro participante pierde 10 puntos. </li>
+
+    <li>Si usted elije el color <b><font color=#00008B>azul</font></b> y el otro participante el color <b><font color=#32CD32>verde</font></b>,
+        usted pierde 10 puntos y el otro participante no pierde nada.</li>
+
+</ol>
+
+  </p>
+
+<p>Estos cuatro posibles resultados se pueden representar en la siguiente tabla, donde los primeros pagos
+de cada celda corresponden a sus pagos y los pagos después de punto y coma corresponden a los pagos del
+otro participante.</p>
+
+<p>
+
+ <table class='table table-bordered text-center'
+           style='width: auto; margin: auto'>
+        <tr>
+            <th colspan=2 rowspan=2></th>
+            <th colspan=2>El otro participante</th>
+        </tr>
+        <tr>
+            <th> <b><font color=#32CD32>Verde</font></b></th>
+            <th><b><font color=#00008B>Azul</font></b></th>
+        </tr>
+        <tr>
+            <th rowspan=2><span class="rotate90"  valign="middle">Usted</span></th>
+            <th> <b><font color=#32CD32>Verde</font></b></th>
+            <td>{{ Constants.both_green_payoff }}; {{ Constants.both_green_payoff }} </td>
+            <td>{{ Constants.green_payoff }}; {{ Constants.blue_payoff }} </td>
+        </tr>
+        <tr>
+             <th><b><font color=#00008B>Azul</font></b></th>
+            <td>{{ Constants.blue_payoff }}; {{ Constants.green_payoff }}</td>
+            <td>{{ Constants.both_blue_payoff }}; {{ Constants.both_blue_payoff }}</td>
+
+        </tr>
+    </table>
+
+</p>
+
+<p>Si tienen alguna duda por favor levanten la mano y el asistente lo atenderá.
+    Si no tiene dudas por favor oprima el botón "Siguiente".</p>
+
+
+   {% next_button %}
+
+{% endblock %}

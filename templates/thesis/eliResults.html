@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Resultados segunda decisión
+{% endblock %}
+
+{% block content %}
+
+ <table class="table">
+        <tr>
+            <th>Su creencia</th>
+            <th>La decisión de la otra persona</th>
+            <th>Su pago por la segunda decisión</th>
+        </tr>
+            <tr>
+                <td>{{ player.my_belief }}</td>
+                <td>{{ player.get_other_choice_on_ego_display }}</td>
+                <td>{{ player.elicitation_payoff }}</td>
+            </tr>
+    </table>
+
+    {% next_button %}
+{% endblock %}
+
+

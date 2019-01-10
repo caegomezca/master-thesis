@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Resultados tercera decisión
+{% endblock %}
+
+{% block content %}
+
+ <table class="table">
+        <tr>
+            <th>Cantidad de puntos enviados</th>
+            <th>Fundación</th>
+            <th>Su pago por la tercera decisión</th>
+        </tr>
+            <tr>
+                <td>{{ player.dic }}</td>
+                <td>{{ player.ong }}</td>
+                <td>{{ player.dictador_payoff }}</td>
+            </tr>
+    </table>
+
+    {% next_button %}
+{% endblock %}
+
+

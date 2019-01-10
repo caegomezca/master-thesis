@@ -1,0 +1,41 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Tercera decisión
+{% endblock %}
+
+
+{% block content %}
+
+<p align="justify">
+    Para la tercera decisión usted va a recibir {{ Constants.endowmentd }}. Recuerde que
+    el valor de cada punto es de 1.000 pesos colombianos.
+<p/>
+    <p align="justify">
+    Usted puede decidir entregar una parte de esos puntos a una las organizaciones
+    que le indicamos abajo. La suma final de esta tercera decisión va a ser de {{ Constants.endowmentd }} menos la parte que
+    quiera entregar a la asociación que usted eligió. El monto puede ser cero, uno, dos, tres o cuatro puntos.
+        Tenga en cuenta que nosotros nos encargaremos de entregar
+       la cantidad de puntos enviados a la fundación que eligió.
+    </p>
+
+<p> {% formfield player.dic %}
+</p>
+
+<p>
+Por favor elija la organización a la cual quiere donar esa cantidad de puntos.
+    En caso de haber decidido donar cero puntos, por favor elija la opción 'No deseo donar'.
+{% formfield player.ong %}
+</p>
+
+  <p>Recuerde que al final el computador sorteará si le pagamos esta tercera decisión o la segunda decisión. </p>
+
+    <p>Una vez tome la tercera decisión por favor de click en continuar. </p>
+
+
+
+
+    {% next_button %}
+
+{% endblock %}

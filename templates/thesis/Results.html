@@ -1,0 +1,48 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Resultados
+{% endblock %}
+
+{% block content %}
+
+ <table class="table">
+        <tr>
+            <th>Pregunta</th>
+            <th>Su respuesta</th>
+            <th>Respuesta correcta</th>
+            <th>Balance</th>
+        </tr>
+            <tr>
+                <td>1. Si ambos eligen el color <b><font color=#00008B>azul</font></b>, ¿cuántos puntos pierde el otro participante? </td>
+                <td>{{ player.q1 }}</td>
+                <td>{{ Constants.both_blue_payoff_p }}</td>
+                <td>{{ player.correctq1 }}</td>
+            </tr>
+     <tr>
+                <td>2. Si usted elige el color <b><font color=#00008B>azul</font></b> y el otro participante el color <b><font color=#32CD32>verde</font></b>,
+            ¿cuántos puntos pierde usted? </td>
+                <td>{{ player.q2 }}</td>
+                <td>{{ Constants.blue_payoff_p }}</td>
+                <td>{{ player.correctq2 }}</td>
+            </tr>
+      <tr>
+                <td>3. Si usted elige el color <b><font color=#32CD32>verde</font></b> y el otro participante el color <b><font color=#00008B>azul</font></b>,
+            ¿cuántos puntos el otro paricipante? </td>
+                <td>{{ player.q3 }}</td>
+                <td>{{ Constants.blue_payoff_p }}</td>
+                <td>{{ player.correctq3 }}</td>
+            </tr>
+      <tr>
+                <td>4. Si ambos eligen el color <b><font color=#32CD32>verde</font></b>, ¿cuántos puntos pierde usted? </td>
+                <td>{{ player.q4 }}</td>
+                <td>{{ Constants.both_green_payoff_p }}</td>
+                <td>{{ player.correctq4 }}</td>
+            </tr>
+    </table>
+
+    {% next_button %}
+{% endblock %}
+
+

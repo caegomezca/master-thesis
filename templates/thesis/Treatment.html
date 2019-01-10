@@ -1,0 +1,22 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+    Su dotación inicial
+{% endblock %}
+
+{% block content %}
+
+<p>
+
+        {% if player.treatment == 'NVR-NCI'  %}
+            El sorteo realizado por el computador mantuvo su dotación inicial en {{ player.endowment}}.
+        {% elif player.treatment == 'RV-NCI' %}
+            El sorteo realizado por el computador mantuvo su dotación inicial en  {{ player.endowment}}.
+        {% else %}
+            El sorteo realizado por el computador cambió su dotación inicial de {{ Constants.endowmentpd }} a {{ player.endowment}}.
+        {% endif %}
+</p>
+
+ {% next_button %}
+{% endblock %}
+
