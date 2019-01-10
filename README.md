@@ -12,6 +12,13 @@ This experiment program has three main tasks. The first is a Prisoner dilemma Ga
 The otree version used was 2.1.21
 
 ---
+Intelectual property:
+
+You can clone, download, copy, modify or use in a free way this program. The only condition is to add the following reference: 
+
+Gomez, C. (2019). La violencia urbana y el comportamiento prosocial entre grupos sociales: un analisis experimental (Tesis de maestria). Universidad Nacional de Colombia, Bogota, Colombia.
+
+---
 If you have any comment, suggestion, question, praise, etc. Please email:
 
 caegomezca@unal.edu.co
