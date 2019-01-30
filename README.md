@@ -1,11 +1,11 @@
 Code Camilo's Master Thesis
 ---
-This is program of an experiment used in the master thesis in Economic Sciences of Camilo Gomez. The experiment was run in October and November of 2018. The content is Spanish because the pool of subjects was Colombian people, in particular, from Bogota. 
+This is the program of an experiment used in the master thesis research in Economic Sciences of Camilo Gomez. The experiment was run in October and November of 2018. The content is in Spanish because the pool of subjects was Colombian people, in particular, from Bogota. 
 
 ---
 Experiment structure:
 
-This experiment program has three main tasks. The first is a Prisoner Dilemma Game with district contingent decisions. The second is a beliefs elicitation. The third is a Dictator Game. In addition, the program has a post-experimental questionnaire. 
+This experiment program has three main tasks. The first is a Prisoner Dilemma Game with district contingent decisions. The second is a belief elicitation. The third is a Dictator Game. In addition, the program has a post-experimental questionnaire. 
 
 ---
 
